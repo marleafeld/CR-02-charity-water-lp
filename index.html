@@ -45,3 +45,226 @@
     </section>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quest - charity: water</title>
+    <style>
+        /* --- CSS STYLES --- */
+
+        /* 1. General Settings */
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Proxima Nova', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            text-align: center;
+        }
+
+        /* 2. Navigation / Header */
+        header {
+            padding: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+            /* Mimicking the logo text */
+            font-family: 'Georgia', serif; 
+        }
+
+        .logo-icon {
+            display: inline-block;
+            background-color: black;
+            color: white;
+            padding: 2px 5px;
+            margin-right: 8px;
+            font-family: sans-serif;
+            font-size: 0.8em;
+        }
+
+        /* 3. The "Liters Collected" Badge */
+        .stats-badge {
+            position: absolute;
+            top: 80px;
+            left: 20px; /* Aligned to left like mockup */
+            background-color: black;
+            color: white;
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* 4. Hero Section (The Main Game Area) */
+        .hero {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800; /* Extra bold */
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* This creates the visual stack of the Earth texture and the Jerry Can */
+        .image-container {
+            position: relative;
+            width: 300px;
+            height: 350px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Placeholder for the cracked earth background */
+        .earth-texture {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60%;
+            background-color: #d3ccb0; /* Beige color to represent dry earth */
+            background-image: repeating-linear-gradient(45deg, #d3ccb0 0, #d3ccb0 10px, #c4bb9e 10px, #c4bb9e 12px); /* Simple pattern */
+            z-index: 1;
+        }
+
+        /* Placeholder for the Yellow Jerry Can */
+        .jerry-can {
+            position: relative;
+            width: 220px;
+            height: 280px;
+            background-color: #ffc907;
+            border-radius: 20px;
+            z-index: 2; /* Sits on top of earth */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            
+            /* CSS trick to make the white "X" shape inside the can */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* The decorative white shape inside the can */
+        .can-detail {
+            width: 100px;
+            height: 100px;
+            border: 15px solid white;
+            border-radius: 20px;
+        }
+
+        /* 5. Call to Action (Button) */
+        .cta-button {
+            background-color: #ffc907;
+            border: none;
+            color: black;
+            font-size: 2rem;
+            font-weight: 800;
+            padding: 15px 40px;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            font-family: 'Proxima Nova', 'Helvetica Neue', sans-serif;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05); /* Grows slightly on hover */
+        }
+
+        .tagline {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        /* 6. Story Section */
+        .story-section {
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        .story-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .story-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .story-content p {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Mobile adjustment */
+        @media (max-width: 600px) {
+            .stats-badge {
+                position: relative;
+                top: 0;
+                left: 0;
+                display: inline-block;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span class="logo-icon">🛢</span> charity: water
+    </header>
+
+    <main>
+        
+        <div class="stats-badge">
+            Liters Collected: 40
+        </div>
+
+        <section class="hero">
+            <h1>WATER QUEST</h1>
+
+            <div class="image-container">
+                <div class="earth-texture"></div>
+                <div class="jerry-can">
+                    <div class="can-detail"></div>
+                </div>
+            </div>
+
+            <button class="cta-button" onclick="alert('Game Starting!')">START GAME</button>
+
+            <p class="tagline">
+                Collect Clean water to<br>
+                transform a community
+            </p>
+        </section>
+
+        <section class="story-section">
+            <div class="story-content">
+                <h2>Why we play</h2>
+                <p>
+                    Clean water changes everything. In this game, your goal is to collect water to turn dry, arid land into a thriving community. 
+                    Every click brings us closer to a world where everyone has access to clean, safe drinking water.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
